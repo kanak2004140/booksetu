@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BookSetu:Digital library app</title>
+    <link rel="stylesheet" href="front.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="main1">
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">BookSetu</h2>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="Fictional.html">FICTION</li>
+                        <li><a href="#">ACADEMICS</a></li>
+                        <LI><a href="profile.html">PROFILE</a></LI>
+                        <li><a href="sellpage.html"><b>TO SELL</b></a></li>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type To text">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+
+            </div>
+            <div class="content">
+                <h1>BookSetu <span>A Digital</span> Library</h1>
+                <script>
+                    // Fetch login page content from the backend
+                    document.querySelector('.btnn a').addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const email = document.querySelector('input[name="email"]').value;
+                        const dob = document.querySelector('#DOB').value;
+
+                        fetch('/api/login', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ email, dob }),
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    alert('Login successful!');
+                                    window.location.href = 'profile.html';
+                                } else {
+                                    alert('Invalid credentials. Please try again.');
+                                    window.location.href = 'signup.html';
+                                }
+                            })
+                            .catch(error => console.error('Error during login:', error));
+                    });
+                </script>
+                <img src="bookSetu (1).png" alt="" class="par">
+
+                <div class="form">
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <label for="DOB">DOB</label>
+                    <input type="date"  id="DOB" placeholder="enter your birth date">
+                    <button class="btnn"><a href="#">Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                        <a href="signup.html">Sign up </a> here</a>
+                    </p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div><div class="books">
+    <h1 class="recom-head">Recommendation </h1>
+    <div class="recommendation">
+        
+        <div class="book-card">
+            <img src="download.jpg" alt="Book 1 Cover" class="booksize">
+            <div class="book-title">Rich Dad And Poor Dad</div>
+            <div class="book-author">
+                Robert Kiyosak</div>
+            <div class="book-description">A psychological thriller about a woman who shoots her husband and then stops
+                speaking.</div>
+            <div class="price">Price:&#8377;400/-</div>
+            <button class="btn buy"><a href="readpage.html">READ MORE</a></button>
+
+
+        </div>
+        <div class="book-card">
+            <img src="atomic.jpg" alt="Book 2 Cover" class="booksize">
+            <div class="book-title">Atomic Habits</div>
+            <div class="book-author">James Clear</div>
+            <div class="book-description">A guide to building good habits and breaking bad ones through small changes.
+            </div>
+            <div class="price">Price:&#8377;400/-</div>
+            <button class="btn buy">READ MORE</button>
+
+
+        </div>
+        <div class="book-card">
+            <img src="educated.jpg" alt="Book 3 Cover" class="booksize">
+            <div class="book-title">Educated</div>
+            <div class="book-author">Tara Westover</div>
+            <div class="book-description">A memoir about a woman who grows up in a strict and abusive household in rural
+                Idaho.</div>
+            <div class="price">Price:&#8377;400/-</div>
+            <button class="btn buy">READ MORE</button>
+
+        </div>
+        <div class="book-card">
+            <img src="sapiens.jpg" alt="Book 4 Cover" class="booksize">
+            <div class="book-title">Sapiens</div>
+            <div class="book-author">Yuval Noah Harari</div>
+            <div class="book-description">A brief history of humankind, exploring the evolution and impact of Homo
+                sapiens.</div>
+            <div class="price">Price:&#8377;400/-</div>
+            <button class="btn buy">READ MORE</button>
+
+        </div>
+    </div>
+    </div></div>
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Us -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@bookstore.com</p>
+                <p>Phone: +1 (234) 567-890</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Help & Support -->
+            <div class="footer-section help">
+                <h3>Help & Support</h3>
+                <a href="#">FAQs</a><br>
+                <a href="#">Customer Service</a><br>
+                <a href="#">Chatbot</a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a><br>
+                <a href="#">Bestsellers</a><br>
+                <a href="#">New Arrivals</a><br>
+                <a href="#">Categories</a><br>
+                <a href="#">Offers</a>
+            </div>
+
+            <!-- Legal & Policies -->
+            <div class="footer-section legal">
+                <h3>Legal & Policies</h3>
+                <a href="#">Terms of Service</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Refund Policy</a>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates and book recommendations:</p>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+
+            <!-- Store Location -->
+            <div class="footer-section store-location">
+                <h3>Store Location</h3>
+                <p>Visit our physical store at:</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509113!2d144.963057615316!3d-37.8141079797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf4c73f6938c7bc49!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sau!4v1614584504404!5m2!1sen!2sau"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

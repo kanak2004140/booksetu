@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050a30;
+            color: #f4f4f9;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #424c6a;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-details {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .book-cover img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        .book-info h1 {
+            font-size: 2rem;
+            color: #fcb017;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #f4f4f9;
+        }
+
+        .description {
+            margin-bottom: 1.5rem;
+        }
+
+        .price-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .price-section p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .buttons button {
+            padding: 0.8rem 1.5rem;
+            background: #fcb017;
+            color: #050a30;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .buttons button:hover {
+            background: #ffcc33;
+            transform: scale(1.05);
+        }
+
+        .reviews {
+            margin-top: 2rem;
+        }
+
+        .reviews h2 {
+            font-size: 1.5rem;
+            color: #fcb017;
+            margin-bottom: 1rem;
+        }
+
+        .review {
+            background: #050a30;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #fcb017;
+        }
+
+        .review h4 {
+            color: #fcb017;
+            margin-bottom: 0.5rem;
+        }
+
+        .review p {
+            color: #f4f4f9;
+        }
+
+        /* Back Button */
+        .back-btn {
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: #f4f4f9;
+            color: #050a30;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: #fcb017;
+            color: #050a30;
+        }
+
+        /* Popup */
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background: #424c6a;
+            padding: 2rem;
+            width: 400px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .popup h2 {
+            color: #fcb017;
+            margin-bottom: 1rem;
+        }
+
+        .popup p {
+            color: #f4f4f9;
+            margin-bottom: 1.5rem;
+        }
+
+        .popup button {
+            padding: 0.7rem 1.5rem;
+            background: #fcb017;
+            color: #050a30;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background: #ffcc33;
+        }
+
+        .popup #close-popup {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #fcb017;
+            color: #050a30;
+            border: none;
+            border-radius: 50%;
+            padding: 0.3rem 0.7rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .book-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .book-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="Fictional.html" class="back-btn">← Back to Bookstore</a>
+        <div class="book-details">
+            <!-- Book Cover Image -->
+            <div class="book-cover">
+                <img src="WhatsApp Image 2025-03-30 at 11.47.46_94c20479.jpg" alt="Book Cover">
+            </div>
+
+            <!-- Book Information -->
+            <div class="book-info">
+                <h1>The Silent Patient</h1>
+                <h3>By Alex Michaelides</h3>
+                <div class="description">
+                    <p>The Silent Patient by Alex Michaelides is a gripping psychological thriller that follows Alicia
+                        Berenson, a famous painter who seemingly has a perfect life—until she suddenly shoots her
+                        husband five times and never speaks another word. Confined to a secure psychiatric facility,
+                        Alicia's silence turns her into a mystery that intrigues psychotherapist Theo Faber. Determined
+                        to unravel the truth behind her crime, Theo delves into her past, uncovering dark secrets and
+                        shocking twists that challenge everything he believes. With its unpredictable narrative and
+                        psychological depth, The Silent Patient keeps readers on the edge of their seats until the very
+                        last page.</p>
+                </div>
+
+                <!-- Price Section -->
+                <div class="price-section">
+                    <p><strong>Buy Price:</strong> ₹550</p>
+                    <p><strong>Rent Price:</strong> ₹99</p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button><a href="buy.html">Buy</a></button>
+                    <button><a href="buy.html">Rent</a></button>
+                    <button id="read-btn">Read</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Reviews Section -->
+        <div class="reviews">
+            <h2>User Reviews</h2>
+            <div class="review">
+                <h4>John Doe</h4>
+                <p>⭐⭐⭐⭐⭐ - A timeless classic! Highly recommended.</p>
+            </div>
+            <div class="review">
+                <h4>Jane Smith</h4>
+                <p>⭐⭐⭐⭐ - Beautifully written, though a bit slow at times.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="popup-container">
+        <div class="popup">
+            <button id="close-popup">X</button>
+            <h2>Login Required</h2>
+            <p>To continue further login is required.</p>
+            <button onclick="window.location.href='front.html';">Log In</button>
+        </div>
+    </div>
+
+    <script>
+        // Show popup when "Read" button is clicked
+        document.getElementById("read-btn").addEventListener("click", function () {
+            document.getElementById("popup-container").style.display = "flex";
+        });
+
+        // Close popup
+        document.getElementById("close-popup").addEventListener("click", function () {
+            document.getElementById("popup-container").style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

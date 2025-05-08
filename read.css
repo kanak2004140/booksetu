@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #050a30; /* Dark blue background */
+    color: #ffffff; /* Light text for readability */
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #1c1f4a; /* Slightly lighter tone for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.back-button {
+    background: #333333; /* Dark gray */
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-cover img {
+    width: 100%;
+    border-radius: 5px;
+    height:500 px;
+    
+}
+
+.book-title h1 {
+    font-size: 24px;
+    margin: 15px 0 5px;
+    color: #d4d4ff; /* Light lavender tone */
+}
+
+.book-title h3 {
+    font-size: 18px;
+    color: #a9a9ff; /* Softer blue for the author */
+}
+
+.book-description {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #ddddff; /* Slightly lighter for readability */
+}
+
+.price-section {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.action-buttons button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.rent-button {
+    background-color: #2196F3;
+    color: #ffffff;
+}
+
+.read-button {
+    background-color: #FF5722;
+    color: #ffffff;
+}
+
+.reviews-section {
+    margin-top: 20px;
+    border-top: 1px solid #50557b; /* Subtle line for separation */
+    padding-top: 10px;
+    color: #ddddff;
+}
+
+.review {
+    margin-bottom: 10px;
+}

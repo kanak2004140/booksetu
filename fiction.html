@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Books Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fiction.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-book-open"></i> Fictional Books</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Browse</a>
+                <a href="#">New Releases</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input type="text" class="search-bar" placeholder="Search for books, authors, genres...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-options">
+            <span>Filter by:</span>
+            <select>
+                <option>Genre</option>
+                <option>Fantasy</option>
+                <option>Sci-Fi</option>
+                <option>Mystery</option>
+            </select>
+            <select>
+                <option>Price</option>
+                <option>Under $10</option>
+                <option>$10-$20</option>
+                <option>Over $20</option>
+            </select>
+        </div>
+    </div>
+    
+    <main class="books-container">
+        <!-- Book 1 -->
+        <div class="book-card">
+            <div class="book-badge">Bestseller</div>
+            <img src="https://m.media-amazon.com/images/I/81bsw6fnUiL.AC_UF1000,1000_QL80.jpg" alt="The Shadow of the Wind" class="book-cover">
+            <div class="book-info">
+                <h2 class="book-title">The Shadow of the Wind</h2>
+                <p class="book-author">By Carlos Ruiz Zafón</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5 (1,240 reviews)</span>
+                </div>
+                <p class="book-description">A mysterious book leads a young boy to uncover a dark secret in post-war Barcelona, intertwining his fate with the forgotten author of the book.</p>
+                
+                <div class="price-section">
+                    <span class="price">$12.99</span>
+                    <span class="original-price">$15.99</span>
+                    <span class="discount">20% OFF</span>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn btn-wishlist"><i class="far fa-heart"></i> Wishlist</button>
+                </div>
+                
+                <div class="book-reviews">
+                    <p class="review-title">Featured Review</p>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <span>Sarah J.</span>
+                        </div>
+                        <p class="review-text">"A mesmerizing tale that blends mystery, romance, and gothic elements. One of the best books I've read this year!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Book 2 -->
+        <div class="book-card">
+            <div class="book-badge">New Release</div>
+            <img src="https://m.media-amazon.com/images/I/81WZ6QvGZ2L.AC_UF1000,1000_QL80.jpg" alt="The Midnight Library" class="book-cover">
+            <div class="book-info">
+                <h2 class="book-title">The Midnight Library</h2>
+                <p class="book-author">By Matt Haig</p>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (2,450 reviews)</span>
+                </div>
+                <p class="book-description">Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life.</p>
+                
+                <div class="price-section">
+                    <span class="price">$10.99</span>
+                    <span class="original-price">$12.99</span>
+                    <span class="discount">15% OFF</span>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn btn-wishlist"><i class="far fa-heart"></i> Wishlist</button>
+                </div>
+                
+                <div class="book-reviews">
+                    <p class="review-title">Featured Review</p>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <span>Michael T.</span>
+                        </div>
+                        <p class="review-text">"A thought-provoking exploration of regret and the choices that make us who we are. Couldn't put it down!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for fictional books since 2010. We curate the best stories to ignite your imagination.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">Authors</a></li>
+                    <li><a href="#">Deals</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-goodreads"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Fictional Books Store. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

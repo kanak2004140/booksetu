@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Digital Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050a30; /* Main background */
+            color: #f4f4f9; /* Light text */
+            line-height: 1.6;
+        }
+
+        header {
+            background: #050a30; /* Consistent with main background */
+            color: #fcb017; /* Golden text for contrast */
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #424c6a; /* Complementary color for contrast */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #fcb017;
+            padding-bottom: 1.5rem;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fcb017; /* Golden border */
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-details h2 {
+            font-size: 1.8rem;
+            color: #fcb017; /* Highlight username */
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details p {
+            font-size: 1rem;
+            color: #f4f4f9;
+        }
+
+        .profile-nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .profile-nav a {
+            text-decoration: none;
+            color: #fcb017;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 0.3rem;
+        }
+
+        .profile-nav a:hover {
+            color: #ffffff;
+            border-bottom: 2px solid #fcb017;
+        }
+
+        .profile-section {
+            margin-bottom: 2rem;
+        }
+
+        .profile-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fcb017;
+        }
+
+        .options-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options-list li {
+            background: #050a30; /* Matching the main background */
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #fcb017; /* Golden accent */
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .options-list li:hover {
+            background: #424c6a; /* Lighter shade for hover */
+            transform: scale(1.05);
+        }
+
+        .options-list li i {
+            font-size: 1.5rem;
+            color: #fcb017;
+        }
+
+        .options-list li span {
+            font-size: 1.2rem;
+            color: #f4f4f9;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #424c6a; /* Footer background */
+            color: #fcb017;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fcb017;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        button {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: #fcb017;
+            color: #050a30;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #ffcc33;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <p>Manage your account settings and preferences here</p>
+    </header>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="profile-picture.jpg" alt="User Profile Picture">
+            <div class="profile-details">
+                <h2>KSK</h2>
+                <p>Email: KSK.GDG@example.com</p>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="profile-nav">
+            <a href="#account-settings">Account Settings</a>
+            <a href="#options">Options</a>
+            <a href="#logout">Logout</a>
+        </div>
+
+        <!-- Profile Options Section -->
+        <div id="options" class="profile-section">
+            <h3>Options</h3>
+            <ul class="options-list">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <span>Email Settings</span>
+                </li>
+                <li>
+                    <i class="fa fa-bell"></i>
+                    <span>Notifications</span>
+                </li>
+                <li>
+                    <i class="fa fa-lock"></i>
+                    <span>Privacy and Security</span>
+                </li>
+                <li>
+                    <i class="fa fa-cog"></i>
+                    <span>Account Settings</span>
+                </li>
+                <li>
+                    <i class="fa fa-truck"></i>
+                    <span>Order Tracking</span>
+                </li>
+                <li>
+                    <i class="fa fa-credit-card"></i>
+                    <span>Payment Methods</span>
+                </li>
+                <li>
+                    <i class="fa fa-palette"></i>
+                    <span>Theme Preferences</span>
+                </li>
+                <li>
+                    <i class="fa fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Logout Section -->
+        <div id="logout" class="profile-section">
+            <button>Logout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Digital Bookstore. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+</body>
+
+</html>

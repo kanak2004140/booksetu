@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050a30; /* Main background */
+            color: #f4f4f9; /* Light text */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #424c6a; /* Form background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #fcb017; /* Golden text for contrast */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #fcb017;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="month"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            border: 1px solid #fcb017;
+            outline: none;
+        }
+
+        .payment-options {
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-options label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.7rem;
+            font-weight: normal;
+        }
+
+        .payment-options input[type="radio"] {
+            accent-color: #fcb017; /* Styling radio button color */
+        }
+
+        .card-details {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .card-details input {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background: #fcb017;
+            color: #050a30; /* Text color for button */
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #ffcc33;
+            transform: scale(1.05);
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #f4f4f9;
+        }
+
+        .secure i {
+            color: #fcb017;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Payment for Purchase</h1>
+        <form action="#" method="POST">
+            <!-- Shipping Information -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="address">Shipping Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your shipping address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <!-- Payment Mode -->
+            <div class="payment-options">
+                <label>Select Mode of Payment:</label>
+                <label>
+                    <input type="radio" id="upi" name="payment-mode" value="upi" required>
+                    UPI
+                </label>
+                <label>
+                    <input type="radio" id="credit-card" name="payment-mode" value="credit-card" required>
+                    Credit Card
+                </label>
+                <label>
+                    <input type="radio" id="debit-card" name="payment-mode" value="debit-card" required>
+                    Debit Card
+                </label>
+                <label>
+                    <input type="radio" id="paypal" name="payment-mode" value="paypal" required>
+                    PayPal
+                </label>
+            </div>
+
+            <!-- Payment Details -->
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" id="card-name" name="card-name" placeholder="Enter cardholder's name" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+            <div class="card-details">
+                <div>
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="month" id="expiry-date" name="expiry-date" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" name="cvv" placeholder="XXX" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Proceed to Pay</button>
+        </form>
+        <p class="secure">
+            <i class="fa fa-lock"></i> Secure Checkout - Your payment information is encrypted
+        </p>
+    </div>
+</body>
+
+</html>

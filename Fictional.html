@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        *{
+            margin-top: zero;
+            padding-top: zero;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #424c6a;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar{
+    width: 100vw;
+    height: 100px;
+    margin-top: 0px;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #fcb017;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-bottom:0px;
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    padding-right:30px;
+    padding-top:0px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 300px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent #e1e3e9 ;
+    border: 1px solid ;
+    margin-top: 13px;
+    color: #3219a1;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #3219a1;
+    border: 2px solid #3219a1;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+.main{
+    background-color: #050a30;
+    padding-bottom:20px;
+}
+
+        header {
+            background-color:#a9aebd;
+            color:#2b3657;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .book-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .book-author {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .book-description {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 48%;
+            font-size: 14px;
+        }
+
+        .buy {
+            background: green;
+            color: white;
+        }
+
+        .rent {
+            background: blue;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <header class ="main">
+       
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">BookSetu</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="front.html">HOME</a></li>
+                        <li><a href="Fictional.html">FICTION</li>
+                        <li><a href="#">ACADEMICS</a></li>
+                        <LI><a href="profile.html">PROFILE</a></LI>
+                        <li><a href="sellpage.html">TO SELL</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type To text">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+            </div>
+       
+        </header>
+        <header>
+           
+        <h1><i class="fa-solid fa-book-open" > </i>Fictional Books</h1>
+    </header>
+    <div class="container">
+        <div class="book-card">
+            <img src="WhatsApp Image 2025-03-30 at 11.47.46_94c20479.jpg" alt="Book 1 Cover"><a href="readpage.html">
+            <div class="book-title">The Silent Patient</div>
+            <div class="book-author">Alex Michaelides</div>
+            <div class="book-description">A psychological thriller about a woman who shoots her husband and then stops
+                speaking.</div>
+            <div class="price">Buy: &#8377;550 | Rent: &#8377;100</div>
+            <button class="btn buy"><a href="buy.html">Buy</a></button>
+            <button class="btn rent">Rent</button></a>
+        </div>
+        <div class="book-card">
+            <img src="WhatsApp Image 2025-03-30 at 11.47.46_2d97b5ca.jpg" alt="Book 2 Cover">
+            <div class="book-title">The Hunger Games</div>
+            <div class="book-author">Suzanne Collins</div>
+            <div class="book-description">A guide to building good habits and breaking bad ones through small changes.
+            </div>
+            <div class="price">Buy: &#8377;730 | Rent: &#8377;150</div>
+            <button class="btn buy"><a href="buy.html">Buy</a></button>
+            <button class="btn rent">Rent</button>
+        </div>
+        <div class="book-card">
+            <img src="pride.jpg" alt="Book 3 Cover" height="400 px">
+            <div class="book-title">Pride and Prejudice</div>
+            <div class="book-author">Jane Auston</div>
+            <div class="book-description">A timeless romance about love, class, and misunderstandings in 19th-century
+                England.</div>
+            <div class="price">Buy: &#8377;420 | Rent: &#8377;100</div>
+            <button class="btn buy"><a href="buy.html">Buy</a></button>
+            <button class="btn rent"><a href="buy.html">Rent</a></button>
+        </div>
+        <div class="book-card">
+            <img src="harry2.jpg" alt="Book 4 Cover" height="500 px">
+            <div class="book-title">Harry Potter and the Sorcerer’s Stone </div>
+            <div class="book-author">JK Rowling</div>
+            <div class="book-description">A young wizard, Harry Potter, discovers his magical heritage and battles lord
+                Voldemort.</div>
+            <div class="price">Buy: &#8377;500| Rent: &#8377;120</div>
+            <button class="btn buy"><a href="buy.html">Buy</a></button>
+            <button class="btn rent">Rent</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

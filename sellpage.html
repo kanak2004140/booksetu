@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Books for Sale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            width: 1200px;
+            height: 55px;
+            margin: auto;
+        }
+
+        .icon {
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+
+        .logo {
+            color: #fcb017;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 5px
+        }
+
+        .menu {
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+
+        ul {
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: #ff7200;
+        }
+
+        .search {
+            width: 330px;
+            float: left;
+            margin-left: 270px;
+        }
+
+        .srch {
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #211168;
+            margin-top: 13px;
+            color: #fff;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            background: #3219a1;
+            border: 2px solid #3219a1;
+            margin-top: 13px;
+            color: #fff;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: #000;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .srch:focus {
+            outline: none;
+        }
+
+
+
+        .types {
+            width: 150px;
+            height: 20px;
+        }
+
+
+        .navbar {
+            width: 1200px;
+            height: 55px;
+            margin: auto;
+        }
+
+        .icon {
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+
+        .logo {
+            color: #fcb017;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+            margin-top: 5px
+        }
+
+        .menu {
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+
+        .container {
+            padding: 1rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .book {
+            border: 1px solid #ddd;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .book h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .book p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+
+
+    <header>
+        <h1>Old Books for Sale</h1>
+    </header>
+    <div class="container">
+        <div class="book">
+            <h3>The Great Gatsby</h3>
+            <p>Author: F. Scott Fitzgerald</p>
+            <p>Price: ₹200</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="book">
+            <h3>To Kill a Mockingbird</h3>
+            <p>Author: Harper Lee</p>
+            <p>Price: ₹250</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="book">
+            <h3>1984</h3>
+            <p>Author: George Orwell</p>
+            <p>Price: ₹300</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Old Books</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 10%;
+            background-color: #050a30;
+            background-image: url(ftcms_e6ad43d9-a35b-4439-ba99-25b45bd43736.avif);
+            background-size: cover;
+            background-attachment: fixed;
+           
+        }
+
+        header {
+            background: #050a30;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #c5c9d3;
+        }
+
+        .container {
+            background: #424c6a;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            background: #c5c9d3;
+            border-radius: 5px;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        form button:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">BOOK SETU</div>
+
+        </div>
+        <h1>Sell Your Old Books</h1>
+    </header>
+    <div class="container">
+        <form action="#" method="post">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter book title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="Enter author's name" required>
+
+            <label for="price">Price (₹):</label>
+            <input type="number" id="price" name="price" placeholder="Enter price in INR" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Provide a short description"></textarea>
+
+            <label for="contact">Contact Info:</label>
+            <input type="email" id="contact" name="contact" placeholder="Enter your email" required>
+
+            <label for="book-photo">Upload Book Photo:</label>
+            <input type="file" id="book-photo" name="book-photo" accept="image/*">
+
+            <button type="submit">List Book for Sale</button>
+        </form>
+    </div>
+</body>
+
+</html>
