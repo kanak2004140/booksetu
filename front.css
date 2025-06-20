@@ -4,7 +4,7 @@
 }
 
 .main{
-    width: 100%;
+    width: 100vw,
     background: linear-gradient(to top, #050a30 40%,#050a30 50%), url(1.jpg);
     background-position: center;
     background-size: cover;
